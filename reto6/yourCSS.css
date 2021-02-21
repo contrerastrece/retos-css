@@ -10,3 +10,32 @@ Colors:
   height: 300px;
   background-color: #5c434c;
 }
+
+.arc{
+  left: 10px;
+  top: 10px;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  background: #F09462;
+  border-radius: 100% 0 0 0;
+  box-shadow: 200px 0 #F09462,  
+              100px 100px #F09462,
+              300px 100px #F09462,              
+              0 200px #F09462,
+              200px 200px #F09462;
+}
+.arc::after{
+  position: absolute;
+  content: "";
+  width: inherit;
+  height: inherit;
+  background: #F5D6B4;
+  left: 100px;
+  border-radius: inherit;  
+  box-shadow: 200px 0 #F5D6B4,  
+              -100px 100px #F5D6B4,
+              100px 100px #F5D6B4,              
+              0 200px #F5D6B4,
+              200px 200px #F5D6B4;
+}

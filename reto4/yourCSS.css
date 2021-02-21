@@ -10,4 +10,39 @@ Colors:
   width: 400px;
   height: 300px;
   background-color: #19191a;
+  /* background: transparent; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 0; */
+}
+.circle{
+  position: relative;
+  transition: all 1s ease;
+  top:-2rem;
+  width: 10rem;
+  height: 10rem;
+  background: #4F77FF;
+  border-radius: 50%;
+  /* z-index: 4; */
+}
+.circle::before,
+.circle::after{
+  position: absolute;
+  content: "";
+}
+.circle::after{
+  width: 5rem;
+  height: 8rem;
+  top: 50%;
+  background: #F9E492;
+  /* z-index: 2; */
+}
+.circle::before{
+width: 5rem;
+height: 5rem;
+background: turquoise;
+border-radius: 00% 0% 0% 100%;
+z-index: 1;
+top: 5rem;
 }

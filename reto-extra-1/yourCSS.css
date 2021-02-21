@@ -6,7 +6,56 @@ Colors:
   Dark Yellow: #998235
 */
 .bg {
+  position: relative;
   width: 400px;
   height: 300px;
   background: #1a4341;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:0;
+}
+
+.virus{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #F3AC3C;
+  border-radius: 50%;
+  z-index:2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.virus::before,
+.virus::after{
+  position: absolute;
+  content: "";
+}
+.virus::after{
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  /* border:1px solid white; */
+  /* border: 1px solid blanchedalmond; */
+  /* background: #F3AC3C; */
+  background:linear-gradient(90deg, transparent 47%, #F3AC3C 0 53%, transparent 0),
+            linear-gradient(45deg, transparent 48%, #F3AC3C 0 52%, transparent 0),
+            linear-gradient(135deg, transparent 48%, #F3AC3C 0 52%, transparent 0);
+  /* background: linear-gradient(red,blue); */
+  /* top: -50px; */
+  z-index:1;
+  /* transform: rotate(120deg); */
+  /* transform: rotate(50deg); */
+}
+.virus::before{ 
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  border:1px solid white;
+  box-shadow:  
+  20px -25px 0 4px #998235,
+  0px 30px 0 7.5px #998235,
+  -20px -15px 0 12.5px #998235;
+  z-index: 3;
 }

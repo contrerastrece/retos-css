@@ -9,4 +9,35 @@ Colors:
   width: 400px;
   height: 300px;
   background: #293462;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle{
+  position: relative;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  background: #FFF1C1;
+  overflow: hidden;
+}
+.circle::before,
+.circle::after{
+  position: absolute;
+  content: "";
+  background:#FE5F55;
+transform: rotate(45deg)
+}
+.circle::after{
+  bottom: 1rem;
+  width: 4rem;
+  height: 4rem;
+  left: 0.5rem;
+}
+.circle::before{
+  bottom: -3rem;
+  width: 10rem;
+  height: 10rem;
+  right: -.5rem;
 }
